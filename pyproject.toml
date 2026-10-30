@@ -1,0 +1,48 @@
+[project]
+name = "email-classification-system"
+version = "0.1.0"
+description = "Production-ready email classification system built with FastAPI and Scikit-learn."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    { name = "Mohamed" }
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "."
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests",
+]
+python_files = [
+    "test_*.py",
+]
+python_functions = [
+    "test_*",
+]
